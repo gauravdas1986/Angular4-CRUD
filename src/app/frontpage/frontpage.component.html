@@ -1,0 +1,25 @@
+
+ <div  style="background: #698799; text-align: center;height: 90px;">
+    <h2>Books in my store</h2> 
+     </div>
+ <div class="sidenav" style="width:10%;margin-top:5%">
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div>
+ 
+<div class="w3-sidebar w3-bar-block" style="width:20%;margin-left:10%;margin-top:5%"> 
+ <nav> <a  routerLink="/booklist/Java" class="w3-bar-item w3-button" (click)="getBooksByCategory('Java')">Java Books</a></nav>
+  <nav> <a  routerLink="/booklist/C" class="w3-bar-item w3-button" (click)="getBooksByCategory('C')">C Books</a></nav>
+  <nav> <a  routerLink="/booklist/Spring" class="w3-bar-item w3-button" (click)="getBooksByCategory('Spring')">Spring Books</a></nav>
+</div>
+</div>
+
+<div style="margin-left:30%">
+ 
+<router-outlet> </router-outlet>
+</div>
+<!--<app-bookdetail [selectedBook]="selectedBook"></app-bookdetail>-->

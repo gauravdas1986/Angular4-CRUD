@@ -1,0 +1,104 @@
+/* booksComponent's private CSS styles */
+.selected {
+  background-color: #CFffDC !important;
+  color: white;
+}
+.books {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+.books li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+  width: 20em;
+}
+.books li.selected:hover {
+  background-color: #BBD8DC !important;
+  color: white;
+}
+.books li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.books .text {
+  position: relative;
+  top: -3px;
+}
+.books .badge {
+  display: inline-block;
+  font-size: small;
+  color: #434343;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #1AAAAA;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+  width: 20em;
+}
+
+
+/*for menu*/
+.menu {
+  padding: 7px 55px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background : linear-gradient(to bottom, #c0fafa, #188888 50%);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px #999;
+}
+
+/* The sidebar menu */
+.sidenav {
+    height: 50%; /* Full-height: remove this if you want "auto" height */
+    width: 8%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+    margin-left: 60px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 50px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

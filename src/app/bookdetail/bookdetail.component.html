@@ -1,0 +1,71 @@
+<div *ngIf="selectedBook">
+  <!--<h2>{{book.name | uppercase}} Details</h2>-->
+  <!--<h2>{{selectedBook.name}} Details</h2>-->
+  <!--<div><span>id: </span>{{selectedBook.id}}</div>-->
+  <!--<div><span>id: </span>{{selectedBook.id}}-->
+  <br>
+  <h3>Edit Book</h3>
+  <form #bookEditForm="ngForm" (ngSubmit)="onUpdate(bookEditForm.value)">
+    <table>
+      <fieldset class="account-info">
+        <tr>
+          <td>
+            <label>Id:
+      <input [(ngModel)]="selectedBook.id" name="id" />
+    </label>
+          </td>
+          <td>
+            <label>name:
+      <input [(ngModel)]="selectedBook.name" name="name" />
+    </label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Author:
+      <input [(ngModel)]="selectedBook.author" name="author"/>
+    </label>
+          </td>
+          <td>
+            <label>Category:
+      <input [(ngModel)]="selectedBook.category" name="category"/>
+    </label>
+          </td>
+        </tr>
+        <tr>
+          <label>Price:
+      <input [(ngModel)]="selectedBook.price" name="price"/>
+    </label>
+          <button type="submit" class="button">Update</button>
+        </tr>
+      </fieldset>
+    </table>
+  </form>
+  <nav><a routerLink="/booklist">Booklist</a> </nav>
+</div>
+
+
+<div *ngIf="!selectedBook">
+  <h3>Add a new book</h3>
+  <form #bookForm="ngForm" (ngSubmit)="onSubmit(bookForm.value)">
+    <div>
+      <table>
+        <fieldset class="account-info">
+          <tr>
+            <td> <label>Name: <input name="name" [(ngModel)]="name"></label></td>
+            <td><label>Author: <input name="author" [(ngModel)]="author"></label></td>
+          </tr>
+          <tr>
+            <td><label>Category: <input name="category" [(ngModel)]="category"></label></td>
+            <td><label>Description: <input name="desc" [(ngModel)]="desc"></label></td>
+          </tr>
+          <tr>
+            <td> <label>Price: <input name="price" [(ngModel)]="price"></label></td>
+            <td><button type="submit" class="button">Save</button></td>
+          </tr>
+        </fieldset>
+      </table>
+    </div>
+  </form>
+  <nav><a routerLink="/booklist">Booklist</a> </nav>
+</div>
